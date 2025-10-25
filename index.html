@@ -4,79 +4,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MBot (robot éducatif)</title>
+    <title>mBot (robot éducatif) | EduPédia</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <div>   
+   
+    <header>
         <div class="logo">
-            <img src="assets/images/logo.png" width="200" alt="Logo da MiniPédia"/>
+            <figure>
+                <img src="assets/images/edupedia.png" width="180" alt="Logo de EduPédia">
+                <figcaption><strong>EduPédia</strong> — Inspiré de Wikipédia !</figcaption>
+            </figure>
         </div>
-    </div>
+    </header>
 
-    <div class="bar"></div>
+    <div class="bar" role="separator" aria-hidden="true"></div>
 
-    <div class="content">
-        <div class="sidebar">
-            <h2>MBot (robot éducatif)</h2>
+    <main class="content">
+
+       
+        <nav class="sidebar" aria-label="Table des matières">
+            <h2>Sommaire</h2>
             <ul>
-                <li><a href="#">Links</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#origine">Origine</a></li>
+                <li><a href="#fonctionnement">Fonctionnement</a></li>
+                <li><a href="#reception">Réception</a></li>
+                <li><a href="#modularite">Modularité</a></li>
+                <li><a href="#references">Références</a></li>
             </ul>
-        </div>
+        </nav>
 
-        <div class="main">
-            <h1>MBot (robot éducatif)</h1>
-            <p> Robot éducatif à destination des débutants, notamment des enfants, Mbot permet d'apprendre la robotique et le code dans un esprit ludique. </p>
         
-        <h2 id="Introduction">  Introduction </h2>
+        <article class="main">
+            <h1>mBot (robot éducatif)</h1>
+            <p>
+                Le <strong>mBot</strong> est un robot éducatif destiné aux débutants, notamment aux enfants,
+                qui souhaitent découvrir la robotique et la programmation dans un cadre ludique et créatif.
+                Il s’inscrit dans une démarche d’apprentissage <em id="STEM">STEM</em> (Science, Technology, Engineering, Mathematics).
+            </p>
 
-                <p> Livré en kit à monter ou prêt à l'emploi, le mBot est un robot simple, composé d'un châssis en aluminium anodisé coloré supportant deux roues animées par deux moteurs pilotés pas à pas à l’arrière et un patin à l'avant. <br>
-                A l'avant du châssis, le robot dispose d'une paire de capteurs ultrasoniques et d'un couple émetteur/récepteur infrarouge / suiveur de ligne lui permettant de détecter/interagir avec les obstacles et se diriger.<br>
-                Les moteurs et capteurs sont gérés par une carte mère compatible Arduino / ATmega328 intégrée au sommet du montage et enchâssée dans un boitier en plastique injecté translucide.  </p>
+           
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p>
+                    Livré en kit ou prêt à l'emploi, le mBot est un robot simple composé d’un châssis en aluminium coloré,
+                    de deux roues motrices à l’arrière et d’un patin stabilisateur à l’avant. Il intègre des capteurs
+                    ultrasoniques et infrarouges lui permettant de détecter des obstacles et de suivre des trajectoires.
+                </p>
+                <p>
+                    Les moteurs et capteurs sont pilotés par une carte compatible <strong>Arduino / ATmega328</strong>.
+                    Son montage intuitif et son approche axée sur la manipulation en font un outil idéal pour l’apprentissage actif.
+                </p>
+                <figure>
+                    <img src="assets/images/robo.png" width="300" alt="Le robot mBot Makeblock">
+                    <figcaption>Le robot mBot par Makeblock.</figcaption>
+                </figure>
+            </section>
 
-        <h2 id="Origine">  Origine </h2>
-            <p> mBot a été lancé sur la plateforme Kickstarter le 7 avril 2015 lors de la campagne «One robot per kid» par la startup Chinoise Makeblock. <br>
-                Le financement a atteint 285.463 $, soit 1427% du budget initialement prévu (20.000$). <br>
-                La startup chinoise a ensuite pu lever des fonds à hauteur de 30 millions de dollars. </p>
+            
+            <section id="origine">
+                <h2>Origine</h2>
+                <p>
+                    Le projet mBot a vu le jour sur la plateforme <em>Kickstarter</em> le 7 avril 2015, sous le slogan
+                    « One robot per kid ». Porté par la startup chinoise <strong id="Makeblock">Makeblock</strong>, il a récolté plus de
+                    285 000 $, soit 1427 % du financement initial prévu. Cette réussite a permis à Makeblock de devenir
+                    une référence mondiale dans la robotique éducative.
+                </p>
+            </section>
 
-        <h2 id="Fonctionnement"> Fonctionnement </h2>  
-            <p> Compatible Arduino Uno, la carte du robot se programme avec le logiciel mBlock, qui est dérivé du logiciel opensource Scratch. <br>
-                Le logiciel mBlock reprend la présentation de Scratch[3] en ajoutant une section «robot». <br>
-                Le code de Mblock est un langage graphique simple de type «programmation par blocs» donc adapté à l'apprentissage de la programmation, aussi Mbot et Mblock ont été bien adoptés par les académies en france. On trouve de nombreuses ressources pédagogiques[4],[5],[6],[7],[8] sur leurs sites respectifs. <br>
-                Le code est téléversé dans la carte mère du Mbot par le biais de la connexion USB. Au redémarrage de la carte, le code téléversé s’exécute.<br>
-                Les moteurs «droite» et «gauche» fonctionnent de manière indépendante, et la roulette / patin avant équilibre le robot lors des virages. Ce mode de fonctionnement rappelle celui du robot Robie Junior[9] commercialisé dans les années 80 en France par la chaine de magasins Tandy et par RadioShack aux États-Unis. A l'instar de Robie Junior, mBot possède deux émetteurs/récepteurs à Ultrasons pour se situer dans l'espace ou repérer des obstacles. Toutefois, Robie Junior n'était pas programmable. Ce qui fait l'attrait de mBot n'est pas particulièrement l'innovation mais plutôt l'ergonomie du kit de démarrage, le côté ludique ciblant la population jeune et la compatibilité avec les technologies existantes déjà bien implantées (Scratch / Arduino) en harmonie avec les méthodes pédagogiques modernes. </p>  
+            
+            <section id="fonctionnement">
+                <h2>Fonctionnement</h2>
+                <p>
+                    Le mBot peut être programmé via le logiciel <strong id="mBlock">mBlock</strong>, basé sur <em id="=Scratch">Scratch</em>.
+                    L’interface repose sur la programmation par blocs, adaptée aux enfants et aux débutants. Pour les utilisateurs avancés,
+                    il est aussi possible de coder directement en <strong id="Arduino">Arduino C++</strong>.
+                </p>
+                <p>
+                    Le transfert du code se fait par USB ou Bluetooth, et chaque moteur fonctionne indépendamment.
+                    Ce fonctionnement rappelle celui de <em id="Robie">Robie Junior</em>, un robot commercialisé dans les années 1980,
+                    mais entièrement reprogrammé et modernisé.
+                </p>
+            </section>
 
-            <h2 id="Réception"> Réception </h2>
-                <p> La campagne marketing de lancement et de suivi est soignée avec de bons relais sur les réseaux sociaux, plateformes de streaming[10],[11] et la presse spécialisée[12] dans le monde entier. <br>
-                Mbot a été adopté par les enseignants et la communauté DIY[13] en France, la compatibilité de sa carte mère avec le code arduino et la similarité ergonomique avec Scratch ont été un facteur favorisant. </p>
+            
+            <section id="reception">
+                <h2>Réception</h2>
+                <p>
+                    Grâce à une communication bien orchestrée et à une communauté active, le mBot a rapidement conquis
+                    les enseignants et les passionnés de robotique. Il est aujourd’hui utilisé dans de nombreuses écoles
+                    pour initier les élèves aux concepts de logique, de capteurs et de contrôle moteur.
+                </p>
+            </section>
 
-            <h2 id="Modularité"> Modularité / Possibilités d'extension </h2>
-                <p> Le projet Mbot étant un «jeu de construction», de nombreux développeurs ont conçu des modèles et des extensions au kit original proposé par Makeblock. Par exemple, le projet «Mbot vision»[14] propose d'ajouter une fonctionnalité de reconnaissance des objets par apprentissage automatique (machine learning) avec l'ajout d'une carte ESP32, d'une camera et d'un code approprié. </p>
+           
+            <section id="modularite">
+                <h2>Modularité / Possibilités d’extension</h2>
+                <p>
+                    Le mBot est pensé comme un jeu de construction évolutif. De nombreux passionnés ont développé des
+                    extensions matérielles et logicielles. Parmi elles, le projet <em>mBot Vision</em> ajoute une
+                    reconnaissance d’objets par <strong>machine learning</strong> grâce à une carte ESP32 et une caméra.
+                </p>
+                <button onclick="window.open('https://github.com/mikljohansson/mbot-vision.git', '_blank')">
+                    🔗 Voir le projet mBot Vision sur GitHub
+                </button>
+            </section>
 
+            
+            <section id="references">
+                <h2>Références</h2>
+                <ul>
+                    <li>(en) « mBot: $49 educational robot for each kid », sur <a href="https://www.kickstarter.com" target="_blank">Kickstarter</a>, 2015.</li>
+                    <li>Lora Kolodny, « Makeblock raises $30 million for robot-building kits for kids », <a href="https://techcrunch.com" target="_blank">TechCrunch</a>, 2017.</li>
+                    <li>Académie de Rennes, « Robot Mbot en maths et en physique ».</li>
+                    <li>Académie de Poitiers, « Ressources pour le robot mBot ».</li>
+                    <li>Mikael Johansson, « mBot Vision », sur <a href="https://github.com" target="_blank">GitHub</a>, 2021.</li>
+                </ul>
+            </section>
+        </article>
 
-
-
-
-
-        </div>
         
-
-        <div class="anchors">
-            <h2>Résumé</h2>
+        <aside class="anchors">
+            <h2>Navigation rapide</h2>
             <ul>
-                <li><a href="#Introduction">Introduction</a></li>
-                <li><a href="#Origine">Origine</a></li>
-                <li><a href="#Fonctionnement"> Fonctionnement</a></li>
-                <li><a href="#Réception"> Réception </a></li>
-                <li><a href="#Modularité"> Modularité / Possibilités d'extension </a></li>*
-               
+                <li><a href="#Scratch">Scratch</a></li>
+                <li><a href="#Arduino">Arduino</a></li>
+                <li><a href="#Makeblock">Makeblock</a></li>
+                <li><a href="#STEM">STEM</a></li>
             </ul>
-        </div>
-    </div>
+        </aside>
+    </main>
 
-    <div class="footer">
+   
+    <footer class="footer">
+        <p style="text-align:center; padding:1rem;">
+            Projet réalisé dans le cadre du <strong>Module 3 – Trilha HTML</strong> : Recréer Wikipédia avec un layout amélioré.
+        </p>
+    </footer>
 
-    </div>
 </body>
 </html>
